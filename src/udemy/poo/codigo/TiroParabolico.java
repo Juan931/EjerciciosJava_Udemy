@@ -16,14 +16,21 @@ public class TiroParabolico {
 
     public TiroParabolico(float velocidadInicial, int grado) {
         this.velocidadInicial = velocidadInicial;
+        
         this.grado = grado;
     }
        
        public float alturaMaxima(){
-           return 0.0f;
+           float v0y=(float) (this.velocidadInicial * Math.sin(Math.toRadians(grado))); //(float) esto es castear a flotante
+           float tiempo =v0y / this.gravedad;
+           float y = (float) (v0y * tiempo -(4.9f * Math.pow(tiempo, 2)));
+           return y;
        }
        public float alcance(){
-           return 0.0f;
+           float v0x=(float) (this.velocidadInicial * Math.cos(Math.toRadians(grado))); //(float) esto es castear a flotante
+            float tiempo=(float) (2*((this.velocidadInicial * Math.sin(Math.toRadians(grado)))/this.gravedad));
+            float x= (v0x * tiempo);
+           return x;
        }
 
     /**
