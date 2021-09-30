@@ -7,6 +7,7 @@ package udemy.poo.inicio;
 
 import javax.swing.JOptionPane;
 import udemy.poo.codigo.Elipse;
+import udemy.poo.codigo.ElipseDos;
 import udemy.poo.codigo.Empleado;
 import udemy.poo.codigo.JefeDeArea;
 import udemy.poo.codigo.Rectangulo;
@@ -18,14 +19,16 @@ import udemy.poo.codigo.Rectangulo;
 public class Inicio {
     public static void main(String[] args) {
         Elipse elp = new Elipse(3, 2);
+        ElipseDos elpDos = new ElipseDos(3, 2, 3, 2);
         Rectangulo rec = new Rectangulo(4, 4);
         Empleado emp = new Empleado("JhoN ", 10000);
         JefeDeArea jef = new JefeDeArea("Juan", 20000);
         
         
-        JOptionPane.showMessageDialog(null, elp.area() + "\n" + rec.area());
+        /*JOptionPane.showMessageDialog(null, elp.area() + "\n" + rec.area());
         JOptionPane.showMessageDialog(null, emp.incrementoSueldo());
-        JOptionPane.showMessageDialog(null, jef.incrementoSueldo());
-        
+        JOptionPane.showMessageDialog(null, jef.incrementoSueldo());*/
+        JOptionPane.showMessageDialog(null,"Area de Elipse (abstract)" + elp.area() + "\n" 
+                +"Area de Elipse (Normal)" + elpDos.area());
     }
 }
