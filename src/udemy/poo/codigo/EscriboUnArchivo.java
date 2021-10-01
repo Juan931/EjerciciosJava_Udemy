@@ -16,21 +16,20 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Nicolas
+ * @author luisangelcuriel
  */
 public class EscriboUnArchivo {
     public static void main(String[] args) throws IOException {
         FileOutputStream fo = null;
         try {
-            File f = new File(System.getProperty("user.dir") + "/archivo.txt");// acá úedo crear el archivo que yo quiera poniendole el nombre "/archivo"
+            File f = new File(System.getProperty("user.dir") + "/archivo");
             fo = new FileOutputStream(f);
             ObjectOutput ou = new ObjectOutputStream(fo);
-            //Acá escribiremos a la persona en el archivo
-            ou.writeObject(new Persona("Juan", "Perez","Medina", 21));
-            ou.writeObject(new Persona("Pepe", "Perez","Medina", 23));
-            ou.writeObject(new Persona("Maria", "Perez","Medina", 25));
-            ou.writeObject(new Persona("Rosa", "Perez","Medina", 28));
-            ou.writeObject(new Persona("Martha", "Perez","Medina", 30));
+            ou.writeObject(new Persona("Maria", "Hernández", "Sánchez", 23));
+            ou.writeObject(new Persona("Pepe", "Martínez", "Salvador", 22));
+            ou.writeObject(new Persona("Mercader", "Hernández", "Jiménez", 21));
+            ou.writeObject(new Persona("Moisés", "Solveria", "Sorrotela", 20));
+            ou.writeObject(new Persona("Monses", "Tapia", "Curiel", 15));
             ou.close();
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
@@ -42,5 +41,4 @@ public class EscriboUnArchivo {
             }
         }
     }
-    
 }

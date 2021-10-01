@@ -9,18 +9,17 @@ import java.io.Serializable;
 
 /**
  *
- * @author Nicolas
+ * @author luisangelcuriel
  */
-public class Persona implements Serializable{
-    
+public class Persona implements Serializable {
     private String nombre;
-    private String apelldioPaterno;
+    private String apellidoPaterno;
     private String apellidoMaterno;
     private int edad;
 
-    public Persona(String nombre, String apelldioPaterno, String apellidoMaterno, int edad) {
+    public Persona(String nombre, String apellidoPaterno, String apellidoMaterno, int edad) {
         this.nombre = nombre;
-        this.apelldioPaterno = apelldioPaterno;
+        this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
         this.edad = edad;
     }
@@ -33,12 +32,12 @@ public class Persona implements Serializable{
         this.nombre = nombre;
     }
 
-    public String getApelldioPaterno() {
-        return apelldioPaterno;
+    public String getApellidoPaterno() {
+        return apellidoPaterno;
     }
 
-    public void setApelldioPaterno(String apelldioPaterno) {
-        this.apelldioPaterno = apelldioPaterno;
+    public void setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
     }
 
     public String getApellidoMaterno() {
@@ -59,10 +58,10 @@ public class Persona implements Serializable{
 
     @Override
     public String toString() {
-        return "Persona: " + "nombre: " + nombre + ", Apellido Paterno: " + apelldioPaterno 
-                + ", Apellido Materno: " + apellidoMaterno + ", Edad: " + edad ;
+        return "Persona: " + "Nombre: " + nombre + ", Apellido Paterno: " 
+                + apellidoPaterno + ", Apellido Materno: " + apellidoMaterno 
+                + ", Edad: " + edad;
     }
-    
     
     
 }
