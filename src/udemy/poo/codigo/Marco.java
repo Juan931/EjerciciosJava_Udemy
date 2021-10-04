@@ -37,6 +37,11 @@ public class Marco extends JFrame {
         //Agregar lamina
         Lamina lamina = new Lamina(new Dimension(anchura / 2, altura /2));
         this.add(lamina);
+        
+        //Agregar eventos - oyente al Jframe
+        EventoVentana oyente = new EventoVentana();
+        this.addWindowListener(oyente);//basicamente me mostrara el evento cada vez que abra la ventana, cierre, maximice etc
+        
     }
     
     
