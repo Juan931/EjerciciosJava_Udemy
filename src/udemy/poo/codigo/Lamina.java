@@ -33,7 +33,7 @@ import javax.swing.border.TitledBorder;
 
 /**
  *
- * @author Sou Akiyama
+ * @author Juan Medina
  */
 public class Lamina extends JPanel implements ActionListener {
     
